@@ -1,11 +1,15 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import HomeApp from "./src/pages/HomeApp";
+import { StyleSheet, View, StatusBar } from "react-native";
+import Navbar from "./src/components/Navbar";
+import { color } from "./src/styles/pallete";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <HomeApp />
+      <StatusBar
+        backgroundColor={color.interface.lightGray2}
+        barStyle="light-content"
+      />
+      <Navbar />
     </View>
   );
 }
@@ -13,7 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    position: "relative",
+    backgroundColor: color.interface.lightGray3,
     alignItems: "center",
     justifyContent: "center",
   },
