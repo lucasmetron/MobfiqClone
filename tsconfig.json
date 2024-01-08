@@ -4,7 +4,9 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@components/*": ["./src/components/*"],
+      "@screens/*": ["./src/screens/*"],
     }    
   }
 }
