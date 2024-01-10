@@ -4,7 +4,6 @@ import { color } from "@styles/pallete";
 export const container = styled.View`
   width: 100%;
   position: absolute;
-  opacity: 0.5;
   bottom: 0;
   border-top: 2px solid ${color.interface.blue};
   background-color: ${color.interface.white};
