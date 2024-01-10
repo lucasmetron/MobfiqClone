@@ -16,10 +16,11 @@ export const container = styled.View`
 `;
 
 export const option = styled.TouchableOpacity`
-  width: auto;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
   border-top: 2px solid ${color.interface.blue};
 `;
 

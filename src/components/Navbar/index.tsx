@@ -13,7 +13,16 @@ export default function Navbar() {
   const calc = Platform.OS === "ios" ? 0.95 * height : 0.97 * height;
 
   return (
-    <S.container style={{ paddingBottom: height - calc }}>
+    <S.container
+      style={{
+        paddingBottom: height - calc,
+        elevation: 9,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+      }}
+    >
       <S.option onPress={() => navigation.navigate(routes.homeApp)}>
         <Ionicons
           name="home-outline"
