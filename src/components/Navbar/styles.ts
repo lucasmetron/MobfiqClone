@@ -3,7 +3,7 @@ import { color } from "@styles/pallete";
 
 export const container = styled.View`
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   border-top: 2px solid ${color.interface.blue};
   background-color: ${color.interface.white};

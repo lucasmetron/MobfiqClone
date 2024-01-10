@@ -4,7 +4,7 @@ import { Ionicons, Feather, FontAwesome5, AntDesign } from "@expo/vector-icons";
 
 import * as S from "./styles";
 import { color } from "@styles/pallete";
-import { routes } from "../../routes/routes";
+import { routes } from "@routes/routes";
 
 export default function Navbar() {
   const { height } = Dimensions.get("window");

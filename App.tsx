@@ -4,7 +4,7 @@ import { StatusBar } from "react-native";
 import { color } from "@styles/pallete";
 import Categories from "@screens/Categories";
 import HomeApp from "@screens/HomeApp";
-import { routes } from "./src/routes/routes";
+import { routes } from "@routes/routes";
 import Navbar from "@components/Navbar";
 import Cart from "@screens/Cart";
 import More from "@screens/More";
