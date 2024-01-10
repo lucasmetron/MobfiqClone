@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
+
+import { StatusBar, Platform, ScrollView, Text } from "react-native";
 import * as S from "./styles";
-import { StatusBar, Platform, ScrollView } from "react-native";
 
 export default function HomeApp() {
   console.log("to na home");
+  const valueRedux = useSelector((state: any) => state.isLogged);
+  console.log("valueRedux: ", valueRedux);
   const statusBarHeight =
     StatusBar.currentHeight || (Platform.OS === "ios" ? 20 : 0);
   console.log(`Altura da barra de status em ${Platform.OS}`, statusBarHeight);
@@ -10,7 +14,7 @@ export default function HomeApp() {
   function teste() {
     let teste: any = "";
     for (var i = 0; i < 20; i++) {
-      teste = [...teste, <S.title>Home {i}</S.title>];
+      teste = [...teste, <S.title key={i}>Home {i}</S.title>];
     }
     return teste;
   }
@@ -26,6 +30,7 @@ export default function HomeApp() {
         }}
       >
         {teste()}
+        <Text> {valueRedux.message}</Text>
       </ScrollView>
     </S.container>
   );
