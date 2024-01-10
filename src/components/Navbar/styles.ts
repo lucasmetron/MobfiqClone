@@ -4,6 +4,7 @@ import { color } from "@styles/pallete";
 export const container = styled.View`
   width: 100%;
   position: absolute;
+  opacity: 0.5;
   bottom: 0;
   border-top: 2px solid ${color.interface.blue};
   background-color: ${color.interface.white};
@@ -12,11 +13,11 @@ export const container = styled.View`
   align-items: center;
   justify-content: space-around;
   gap: 20px;
-  padding: 10px 10px 10% 10px;
+  padding: 10px 10px 0 10px;
 `;
 
 export const option = styled.TouchableOpacity`
-  width: autor;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
