@@ -15,11 +15,10 @@ export const title = styled.Text`
   text-align: center;
   color: black;
   background-color: yellow;
+  margin-top: 10;
 `;
 
 export const ScroolTest = styled.ScrollView`
   width: 100%;
-  display: flex;
-  gap: 15px;
   background-color: "red";
 `;

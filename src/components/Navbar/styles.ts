@@ -11,20 +11,24 @@ export const container = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
+  gap: 5;
   padding: 10px 10px 0 10px;
 `;
 
 export const option = styled.TouchableOpacity`
   flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 5px;
+  gap: 2px;
   border-top: 2px solid ${color.interface.blue};
 `;
 
-export const teste = styled.Text`
-  font-size: 30px;
+export const titleOption = styled.Text`
+  font-size: 10px;
+  text-align: center;
   color: black;
 `;

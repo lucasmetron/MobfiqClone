@@ -1,21 +1,23 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from "react-native";
 
-import { color } from "@styles/pallete";
-import Categories from "@screens/Categories";
-import HomeApp from "@screens/HomeApp";
-import { routes } from "./routes";
+import { routes } from "@routes/routes";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Navbar from "@components/Navbar";
+import HomeApp from "@screens/HomeApp";
 import Cart from "@screens/Cart";
 import More from "@screens/More";
 import Profile from "@screens/Profile";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Categories from "@screens/Categories";
 
-export default function Navigation() {
+export default function Navigator() {
   const Stack = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={routes.homeApp}>
+      <Stack.Navigator
+        initialRouteName={routes.bottomNavigator}
+        screenOptions={{ headerShown: false, animation: "flip" }}
+      >
         <Stack.Screen
           name={routes.homeApp}
           component={HomeApp}
@@ -41,26 +43,14 @@ export default function Navigation() {
           component={Profile}
           options={{ headerShown: false, animation: "flip" }}
         />
+        {/* 
+        <Stack.Screen
+          name={routes.bottomNavigator}
+          component={BottomNavigation}
+          options={{ headerShown: false, animation: "flip" }}
+        /> */}
       </Stack.Navigator>
       <Navbar />
-      <StatusBar
-        backgroundColor={color.interface.lightGray2}
-        barStyle="light-content"
-      />
     </NavigationContainer>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     width: "100%",
-//     height: "100%",
-//     position: "relative",
-//     // backgroundColor: color.interface.lightGray3,
-//     backgroundColor: color.interface.blue,
-//     display: "flex",
-//     alignItems: "flex-start",
-//     justifyContent: "flex-start",
-//     gap: 15,
-//   },
-// });

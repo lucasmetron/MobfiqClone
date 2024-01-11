@@ -1,15 +1,12 @@
 import { useSelector } from "react-redux";
 
-import { StatusBar, Platform, ScrollView, Text } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import * as S from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 export default function HomeApp() {
-  console.log("to na home");
+  const navigate: any = useNavigation().navigate;
   const valueRedux = useSelector((state: any) => state.isLogged);
-  console.log("valueRedux: ", valueRedux);
-  const statusBarHeight =
-    StatusBar.currentHeight || (Platform.OS === "ios" ? 20 : 0);
-  console.log(`Altura da barra de status em ${Platform.OS}`, statusBarHeight);
 
   function teste() {
     let teste: any = "";
@@ -21,17 +18,14 @@ export default function HomeApp() {
 
   return (
     <S.container>
-      <ScrollView
-        contentContainerStyle={{
-          minWidth: "100%",
-          display: "flex",
-          gap: 15,
-          backgroundColor: "red",
-        }}
-      >
+      <S.ScroolTest>
         {teste()}
         <Text> {valueRedux.message}</Text>
-      </ScrollView>
+
+        <TouchableOpacity onPress={() => navigate("teste")}>
+          <Text>tela teste</Text>
+        </TouchableOpacity>
+      </S.ScroolTest>
     </S.container>
   );
 }
