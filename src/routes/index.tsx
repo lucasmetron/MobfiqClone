@@ -8,6 +8,7 @@ import Cart from "@screens/Cart";
 import More from "@screens/More";
 import Profile from "@screens/Profile";
 import Categories from "@screens/Categories";
+import Categorias1 from "@components/Categorias1";
 
 export default function Navigator() {
   const Stack = createNativeStackNavigator();
@@ -26,6 +27,12 @@ export default function Navigator() {
         <Stack.Screen
           name={routes.categories}
           component={Categories}
+          options={{ headerShown: false, animation: "flip" }}
+        />
+
+        <Stack.Screen
+          name={"categories1"}
+          component={Categorias1}
           options={{ headerShown: false, animation: "flip" }}
         />
         <Stack.Screen
