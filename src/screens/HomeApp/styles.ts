@@ -15,7 +15,7 @@ export const title = styled.Text`
   text-align: center;
   color: black;
   background-color: yellow;
-  margin-top: 10;
+  margin-top: 10px;
 `;
 
 export const ScroolTest = styled.ScrollView`
